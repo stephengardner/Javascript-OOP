@@ -3,25 +3,32 @@
 <head>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>User Module</title>
-    <script src="../../js/jQuery-1.9.1.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/user.js"></script>
 </head>
 <body>
+    <h1>Users Module</h1>
+    <h2>files:</h2>
+    <ul>
+        <li>
+            js/overlay.js
+        </li>
+    </ul>
     <form role="form">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" placeholder="Name">
-            <div onclick="alert(user.isNameValid())">check name validity</div>
+            <div class="btn btn-primary" onclick="alert(user.isNameValid())">check name validity</div>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email">
-            <div onclick="alert(user.isEmailValid())">check email validity</div>
+            <div class="btn btn-primary" onclick="alert(user.isEmailValid())">check email validity</div>
         </div>
         <div class="form-group">
             <label for="phone">Phone</label>
             <input type="phone" class="form-control" id="phone" placeholder="Enter phone">
-            <div onclick="alert(user.isPhoneValid())">check phone validity</div>
+            <div class="btn btn-primary" onclick="alert(user.isPhoneValid())">check phone validity</div>
         </div>
     </form>
     <script>
