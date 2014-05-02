@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>User Module</title>
+    <script src="../../js/jQuery-1.9.1.js"></script>
+    <script src="js/user.js"></script>
+</head>
+<body>
+    <form role="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name">
+            <div onclick="alert(user.isNameValid())">check name validity</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <div onclick="alert(user.isEmailValid())">check email validity</div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="phone" class="form-control" id="phone" placeholder="Enter phone">
+            <div onclick="alert(user.isPhoneValid())">check phone validity</div>
+        </div>
+    </form>
+    <script>
+        var user = new User();
+        user.bindNameTo("#name");
+        user.bindEmailTo("#email");
+        user.bindPhoneTo("#phone");
+    </script>
+</body>
+</html>
